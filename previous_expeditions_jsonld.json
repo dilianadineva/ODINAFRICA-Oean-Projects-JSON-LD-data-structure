@@ -1,0 +1,92 @@
+{
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "endDate": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "startDate": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    },
+    "@type": "ResearchProject",
+    "@id": "https://ioc-africa.org/test/previousResearchExpeditions.php?id=1",
+    "subjectOf": [
+      {
+        "@type": "Vehicle",
+        "@id": "https://ioc-africa.org/test2/researchVessels.php?id=1",
+        "name": "Link to vessel involved in this exp, could use @id if proper here, or just url",
+        "url": "https://ioc-africa.org/test2/researchVessels.php?id=1"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "link to a file associated with this research project",
+        "url": "https://www.example-data-repository.org/id/fileid"
+      },
+      {
+        "@type": "Dataset",
+        "name": "data collected on this research project",
+        "variableMeasured": [ //data_collected
+          {
+            "@type": "PropertyValue",
+            "name": "currents",
+            "description": "description if you have it"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Ocean Surface Stress",
+            "description": "description if you have it"
+          }
+        ]
+      }
+    ],
+    "location": "country_id",
+    "spatialCoverage": [
+      {
+        "@type": "Place",
+        "name": "Geographic Range",
+        "description": "Areas the research took place in ",
+        "keywords": [
+          "geographic_range[]"
+        ] //South Madagascar...
+      },
+      {
+        "@type": "Place",
+        "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
+        "name": "Bay of Bengal Large Marine Ecosystems"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Research Period",
+        "description": "exp_name",
+        "endDate": "2019-05-21",
+        "startDate": "2019-04-15"
+      },
+      {
+        "@type": "PropertyValue",
+        "@measurementTechnique": "description of sampling method here"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Number of stations",
+        "description": "trawl",
+        "value": 12
+      }
+    ],
+    "memberOf": "responsible_institutions",
+    "member": {
+      "@type": "Person",
+      "jobTitle": "chief scientist",
+      "name": "name of person"
+    },
+    "keywords": [
+      // "geographic_range",
+      // "LME_region",
+      "context"
+    ]  
+}
+
+  //https://vscode.dev/liveshare/887A0DD83D8E9A5DF670305B0A18113266DD
+  //https://github.com/iodepo/odis-arch/commit/13b3a16a5443ed81c21aedfa0ed10062c5334215
+  //https://github.com/iodepo/odis-arch/issues/150

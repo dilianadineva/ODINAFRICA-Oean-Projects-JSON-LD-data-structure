@@ -1,0 +1,76 @@
+// research_expedition_id
+// vessel_id
+// vessel_type
+// vessel_dimensions
+// vessel_equipment
+// expedition_name
+// exp_description
+// expedition_code?
+// country_id
+// institution_affiliation?
+// cruise_contact_personnel
+// chief_scientist
+// start_date
+// end_date
+// cruise_track
+// website_link
+// linked_projects
+// collab_opportunities
+// ocean_region
+
+{
+    "@context": {
+      "@vocab": "https://schema.org/"
+    },
+    "@type": "Event",
+    "@id": "https://ioc-africa.org/test/ipcomingResearchExpeditions.php?id=1",
+    "url": "website_link",
+    "subjectOf": 
+      {
+        "@type": "Vehicle",
+        "@id": "https://ioc-africa.org/test2/researchVessels.php?id=1",
+        "name": "Link to vessel involved in this exp, could use @id if proper here, or just url",
+        "url": "https://ioc-africa.org/test2/researchVessels.php?id=1",
+        "vessel_type": "vessel_type",//bodyType?
+        "size": "vessel_dimensions",
+        "vessel_equipment": "vessel_equipment"//?"additionalProperty": {"vessel_equipment": []}
+      },
+
+    "name": "expedition_name",
+    "description": "exp_description",
+    "expedition_code": "expedition_code",//?
+    // "location": "country_id",
+    "organizer": {
+      "@type": "Organization",
+      "name": "institution_affiliation"
+    },
+    "contactPoint": {
+		"@type": "ContactPoint",
+		"name": "cruise_contact_personnel"
+	},
+    "member": {
+        "@type": "Person",
+        "jobTitle": "chief scientist",
+        "name": "chief_scientist"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Research Period",
+          "description": "expedition_name",
+          "startDate": "start_date",
+          "endDate": "end_date"
+        }
+      ],
+      "cruise_track": "cruise_track",//?
+      "linked_projects": "linked_projects",//?
+      "collab_opportunities": "collab_opportunities",//?
+    "spatialCoverage": 
+      {
+        "@type": "Place",
+        "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
+        "name": "ocean_region"
+      },
+    "keywords": []
+
+//https://github.com/iodepo/odis-arch/issues/151
