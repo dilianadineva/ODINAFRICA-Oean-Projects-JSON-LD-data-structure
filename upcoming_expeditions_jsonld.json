@@ -19,59 +19,58 @@
 // ocean_region
 
 {
-    "@context": {
-      "@vocab": "https://schema.org/"
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Event",
+  "@id": "https://ioc-africa.org/test/ipcomingResearchExpeditions.php?id=1",
+  "url": "website_link",
+  // "subjectOf":
+  //   {
+  //     "@type": "Vehicle",
+  //     "@id": "https://ioc-africa.org/test2/researchVessels.php?id=1",
+  //     "name": "Link to vessel involved in this exp, could use @id if proper here, or just url",
+  //     "url": "https://ioc-africa.org/test2/researchVessels.php?id=1",
+  //     "vessel_type": "vessel_type",
+  //     "size": "vessel_dimensions",
+  //     "vessel_equipment": "vessel_equipment[]"}
+  //   },
+  "potentialAction": {
+    "@type": "Action",
+    "name": "March 2037 sample", //expedition_name
+    "description": "March 2037 sample" //exp_description
+  },
+  "expedition_code": "expedition_code", //?
+  // "location": "country_id",
+  "organizer": {
+    "@type": "Organization",
+    "name": "institution_affiliation"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "name": "cruise_contact_personnel"
+  },
+  "contributor": {
+    "@type": "Person",
+    "jobTitle": "Chief Scientist",
+    "name": "chief_scientist"
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "vehicle_name" //?
     },
-    "@type": "Event",
-    "@id": "https://ioc-africa.org/test/ipcomingResearchExpeditions.php?id=1",
-    "url": "website_link",
-    // "subjectOf": 
-    //   {
-    //     "@type": "Vehicle",
-    //     "@id": "https://ioc-africa.org/test2/researchVessels.php?id=1",
-    //     "name": "Link to vessel involved in this exp, could use @id if proper here, or just url",
-    //     "url": "https://ioc-africa.org/test2/researchVessels.php?id=1",
-    //     "vessel_type": "vessel_type",
-    //     "size": "vessel_dimensions",
-    //     "vessel_equipment": "vessel_equipment[]"}
-    //   },
-    "potentialAction": 
-			{
-        "@type": "Action",
-        "name": "March 2037 sample", //expedition_name
-        "description": "March 2037 sample" //exp_description
-      },
-    "expedition_code": "expedition_code",//?
-    // "location": "country_id",
-    "organizer": {
-      "@type": "Organization",
-      "name": "institution_affiliation",
-    },
-    "contactPoint": {
-		"@type": "ContactPoint",
-		"name": "cruise_contact_personnel"
-	},
-    "contributor": {
-        "@type": "Person",
-        "jobTitle": "Chief Scientist",
-        "name": "chief_scientist"
-      },
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "vehicle_name",//?  
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Research Period",
-          "description": "expedition_name",
-          "startDate": "start_date",
-          "endDate": "end_date"
-        }
-      ],
-      "linked_projects": "linked_projects",//?
-      "collab_opportunities": "collab_opportunities",//?
-    "spatialCoverage": [
+    {
+      "@type": "PropertyValue",
+      "name": "Research Period",
+      "description": "expedition_name",
+      "startDate": "start_date",
+      "endDate": "end_date"
+    }
+  ],
+  "linked_projects": "linked_projects", //?
+  "collab_opportunities": "collab_opportunities", //?
+  "spatialCoverage": [
     {
       "@type": "Place",
       "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
@@ -81,7 +80,7 @@
       "@type": "Place",
       "description": "cruise_track"
     }
-    ],
-    "keywords": []
+  ],
+  "keywords": []
 }
 //https://github.com/iodepo/odis-arch/issues/151
