@@ -25,16 +25,6 @@
   "@type": "Event",
   "@id": "https://ioc-africa.org/test/ipcomingResearchExpeditions.php?id=1",
   "url": "website_link",
-  // "subjectOf":
-  //   {
-  //     "@type": "Vehicle",
-  //     "@id": "https://ioc-africa.org/test2/researchVessels.php?id=1",
-  //     "name": "Link to vessel involved in this exp, could use @id if proper here, or just url",
-  //     "url": "https://ioc-africa.org/test2/researchVessels.php?id=1",
-  //     "vessel_type": "vessel_type",
-  //     "size": "vessel_dimensions",
-  //     "vessel_equipment": "vessel_equipment[]"}
-  //   },
   "potentialAction": {
     "@type": "Action",
     "name": "March 2037 sample", //expedition_name
