@@ -63,9 +63,7 @@
     {
       "@type": "PropertyValue",
       "name": "Research Period",
-      "description": "expedition_name",
-      "startDate": "start_date",
-      "endDate": "end_date"
+      "description": "expedition_name"
     }
   ],
   "linked_projects": "linked_projects", //?
@@ -73,12 +71,12 @@
   "spatialCoverage": [
     {
       "@type": "Place",
-      "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
-      "name": "ocean_region"
+      "description": "geographic_range" //changed - the whole thing, cruise_track
     },
     {
       "@type": "Place",
-      "description": "cruise_track"
+      "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
+      "name": "ocean_region"
     }
   ],
   "keywords": []
