@@ -6,7 +6,7 @@
 // expedition_name
 // exp_description
 // expedition_code?
-// country_id
+// country_id - skip
 // institution_affiliation?
 // cruise_contact_personnel
 // chief_scientist
@@ -25,13 +25,19 @@
   "@type": "Event",
   "@id": "https://ioc-africa.org/test/ipcomingResearchExpeditions.php?id=1",
   "url": "website_link",
+  "name": "expedition_name",
+  "description": "exp_description", 
+  "identifier": "expedition_code", 
+  "location": "https://marineregions.org/gazetteer.php?p=details&id=8566", //ocean_region
+  "startDate": "start_date",
+    "endDate": "end_date",
+    "EventStatus": "EventScheduled", //https://schema.org/EventStatusType
   "potentialAction": {
     "@type": "Action",
-    "name": "March 2037 sample", //expedition_name
-    "description": "March 2037 sample" //exp_description
+    "name": "Research Cruise",
+    "instrument": "	vessel_id"
+
   },
-  "expedition_code": "expedition_code", //?
-  // "location": "country_id",
   "organizer": {
     "@type": "Organization",
     "name": "institution_affiliation"
@@ -48,26 +54,27 @@
   "additionalProperty": [
     {
       "@type": "PropertyValue",
-      "name": "vehicle_name" //?
+      "propertyID": "Expedition Code",
+      "value": "exp_code"
     },
     {
       "@type": "PropertyValue",
       "name": "Research Period",
-      "description": "expedition_name"
+      
     }
   ],
   "linked_projects": "linked_projects", //?
   "collab_opportunities": "collab_opportunities", //?
   "spatialCoverage": [
     {
-      "@type": "Place",
-      "description": "geographic_range" //changed - the whole thing, cruise_track
-    },
-    {
-      "@type": "Place",
-      "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
-      "name": "ocean_region"
-    }
+        "@type": "Place",
+        "description": "geographic_range" //the whole field, replacement for cruise_track - same data format as the on in previous expeditions
+      },
+      {
+        "@type": "Place",
+        "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
+        "name": "ocean_region"
+      }
   ],
   "keywords": []
 }
