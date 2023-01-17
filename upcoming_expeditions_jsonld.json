@@ -23,7 +23,8 @@
     "@vocab": "https://schema.org/"
   },
   "@type": "Event",
-  "@id": "https://ioc-africa.org/test/ipcomingResearchExpeditions.php?id=1",
+  "@id": "https://ioc-africa.org/test/upcomingResearchExpeditions.php?id=1",
+  "keywords": ["expedition_name","expedition_code"],
   "url": "website_link",
   "name": "expedition_name",
   "description": "exp_description", 
@@ -35,17 +36,17 @@
   "potentialAction": {
     "@type": "Action",
     "name": "Research Cruise",
-    "instrument": "	vessel_id"
-
+    "instrument": "vessel_id"
   },
-  "organizer": {
+  "organizer": [{
     "@type": "Organization",
     "name": "institution_affiliation"
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
+  {
+    "@type": "Person",
     "name": "cruise_contact_personnel"
-  },
+  }
+],
   "contributor": {
     "@type": "Person",
     "jobTitle": "Chief Scientist",
@@ -60,11 +61,21 @@
     {
       "@type": "PropertyValue",
       "name": "Research Period",
-      
+      "value": "research_period"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "Collaboration Opportunities",
+      "value": "collab_opportunities"
     }
   ],
-  "linked_projects": "linked_projects", //?
-  "collab_opportunities": "collab_opportunities", //?
+  "relatedLink": [{
+    "linked_projects"//array from the projects table
+  },
+{
+    "website_link" //array from the vessels table
+}
+], 
   "spatialCoverage": [
     {
         "@type": "Place",
@@ -73,9 +84,10 @@
       {
         "@type": "Place",
         "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
-        "name": "ocean_region"
+        "name": "ocean_region",
+        "description": "Name of Large Marine Ecosystem region"
       }
-  ],
-  "keywords": []
+  ]
+ 
 }
 //https://github.com/iodepo/odis-arch/issues/151
