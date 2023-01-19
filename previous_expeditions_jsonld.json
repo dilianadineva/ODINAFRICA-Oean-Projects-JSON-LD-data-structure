@@ -3,9 +3,9 @@
       "@vocab": "https://schema.org/" 
     },
     "@type": "ResearchProject",
-    "name": "exp_name", //add
-    "endDate": "end_date", //YYYY-MM-DD
-    "startDate":  "start_date", //YYYY-MM-DD
+    "name": "exp_name", 
+    "foundingDate":  "start_date",
+    "dissolutionDate": "end_date", 
     "@id": "https://ioc-africa.org/test/previousResearchExpeditions.php?id=1",
     "keywords": [
       "context",
@@ -14,11 +14,23 @@
     "potentialAction": {
       "@type": "Action",
       "name": "Research Cruise",
-      "instrument": "vessel_id"
-    }, //to be added 
-  "relatedLink": [ //to be added 
-    "linked_projects", //array from the projects table, empty for now, remove
-    "website_link" //array from the vessels table
+      "instrument": "vessel_id",
+       "additionalProperty": [
+          {
+          "@type": "PropertyValue",
+          "measurementTechnique": "description of sampling method here"
+          },
+         {
+          "@type": "PropertyValue",
+          "name": "Number of stations",
+          "description": "add description ",
+          "value": 12
+         }
+      ]
+    }, 
+  "relatedLink": [ 
+    "linked_projects", 
+    "website_link" 
 ], 
     "subjectOf": [
       {
@@ -35,7 +47,7 @@
       {
         "@type": "Dataset",
         "name": "data collected on this research project",
-        "variableMeasured": [ //data_collected
+        "variableMeasured": [
           {
             "@type": "PropertyValue",
             "name": "currents",
@@ -49,10 +61,10 @@
         ]
       }
     ],
-    "location":  [//changed
+    "location":  [
       {
         "@type": "Place",
-        "description": "geographic_range" //changed - the whole thing
+        "description": "geographic_range"
       },
       {
         "@type": "Place",
@@ -60,28 +72,8 @@
       },
       {
         "@type": "Place",
-        "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
+        "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", 
         "name": "Bay of Bengal Large Marine Ecosystems"
-      }
-    ],
-
-    "additionalProperty": [
-      {
-        "@type": "Duration",
-        "name": "Research Period",
-        "description": "exp_name",//remove
-        "duration": "research_period"//ISO 2007-03-01T13:00:00Z/2008-05-11T15:30:00Z or 2007-03-01/2008-05-11
-        //remove startdate, enddate
-      },
-      {
-        "@type": "PropertyValue",
-        "measurementTechnique": "description of sampling method here"//remove @
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "Number of stations",
-        "description": "trawl",
-        "value": 12
       }
     ],
     "memberOf": "responsible_institutions",
@@ -91,6 +83,3 @@
       "name": "name of person"
     }
   }
-  //https://vscode.dev/liveshare/887A0DD83D8E9A5DF670305B0A18113266DD
-  //https://github.com/iodepo/odis-arch/commit/13b3a16a5443ed81c21aedfa0ed10062c5334215
-  //https://github.com/iodepo/odis-arch/issues/150
