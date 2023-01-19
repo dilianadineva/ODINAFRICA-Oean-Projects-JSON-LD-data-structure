@@ -29,7 +29,18 @@
   "name": "expedition_name",
   "description": "exp_description", 
   "identifier": "expedition_code", 
-  "location": "https://marineregions.org/gazetteer.php?p=details&id=8566", //ocean_region
+  "location": [
+    {
+        "@type": "Place",
+        "description": "geographic_range" //the whole field, replacement for cruise_track - same data format as the on in previous expeditions
+      },
+      {
+        "@type": "Place",
+        "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
+        "name": "ocean_region",
+        "description": "Name of Large Marine Ecosystem region"
+      }
+  ],
   "startDate": "start_date",
     "endDate": "end_date",
     "EventStatus": "EventScheduled", //https://schema.org/EventStatusType
@@ -58,36 +69,19 @@
       "propertyID": "Expedition Code",
       "value": "exp_code"
     },
-    {
-      "@type": "PropertyValue",
-      "name": "Research Period",
-      "value": "research_period"
-    },
+    // {
+    //   "@type": "PropertyValue",
+    //   "name": "Research Period",
+    //   "value": "research_period"
+    // },
     {
       "@type": "PropertyValue",
       "propertyID": "Collaboration Opportunities",
       "value": "collab_opportunities"
     }
   ],
-  "relatedLink": [{
-    "linked_projects"//array from the projects table
-  },
-{
+  "relatedLink": [ "linked_projects", //array from the projects table
     "website_link" //array from the vessels table
-}
-], 
-  "spatialCoverage": [
-    {
-        "@type": "Place",
-        "description": "geographic_range" //the whole field, replacement for cruise_track - same data format as the on in previous expeditions
-      },
-      {
-        "@type": "Place",
-        "@id": "https://marineregions.org/gazetteer.php?p=details&id=8566", // use one from https://marineregions.org/gazetteer.php?p=browser&id%5B%5D=29035&id%5B%5D=28833#focus
-        "name": "ocean_region",
-        "description": "Name of Large Marine Ecosystem region"
-      }
-  ]
- 
+]
 }
 //https://github.com/iodepo/odis-arch/issues/151
