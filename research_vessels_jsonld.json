@@ -1,0 +1,51 @@
+{
+    "@context": {
+      "@vocab": "https://schema.org/"
+    },
+    "@type": "Vehicle",
+    "@id": "https://ioc-africa.org/test/jsonld/researchVessels.php?id=1",
+    "identifier": "vessel_id", 
+    "url": "website_link",
+    "name": "vessel_name",
+    "payload": "gross_tonnage",
+    "countryOfOrigin": "country",
+    "productionDate": "year_built",
+    "image": "",
+    "bodyType": "ship",
+    "size": "55.1x9.1",
+    "seatingCapacity": "max_persons",
+    "countryOfAssembly": "country",
+    "countryOfLastProcessing": "country",
+    "additionalProperty":  
+    [{
+      "@type": "PropertyValue",
+      "name": "Ownership",
+      "description": "ownership",
+      "value": "ownership"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "max_persons",
+      "description": "max_persons",
+      "value": "max_persons"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "operational_status",
+      "description": "operational_status",
+      "value": "operational_status"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "home_port",
+      "description": "home_port",
+      "value": "home_port"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "research_equipment",
+      "description": "research_equipment",
+      "value": "research_equipment[]"
+    }
+  ]
+  }
