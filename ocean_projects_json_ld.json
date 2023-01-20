@@ -1,12 +1,10 @@
 {
 	"@context": { "@vocab": "https://schema.org/" },
-	"@type": "ResearchProject", //ResearchProject or Project
-	"@id": "https://ioc-africa.org/test2/oceanProjects.php?id=1",
+	"@type": "ResearchProject", 
+	"@id": "https://ioc-africa.org/test/jsonld/oceanProjects.php?id=1",
 	"url": "website",
-	"name": "project_name", //name
-	// "funds_source": "funds_source", //funder
+	"name": "project_name",
 	"award": "total_grant",
-	// "total_grant": "total_grant", //funding
 	"funder": [
 		{
 			"@type": "FundingAgency",
@@ -14,15 +12,11 @@
 		},
 		{
 			"@type": "FundingAgency",
-			"legalName": "funds_source"
+			"legalName": "additional_source"
 		}
 	],
-	// "additional_source": "additional_source",
-	"legalName": "legal_name", //legalName
-	// "context": "context", //description optional
+	"legalName": "legal_name",
 	"identifier": "identifier",
-	// "exec_agency": "exec_agency", //?
-	// "country_id": "country_id", //location
 	"spatialCoverage": [
 		{
 			"@type": "Place",
@@ -33,34 +27,24 @@
 			"name": "focal_area"
 		}
 	],
-	// "project_type": "project_type", //?
-	"keywords": ["thematic_areas", "LME_region", "project_type"], //could be an array
-	// "focal_area": "focal_area", //areaServed
-	// "thematic_areas": "thematic_areas",
-	// "LME_region": "LME_region", //?
+	"keywords": ["thematic_areas", "LME_region", "project_type"], 
 	"about": {
 		"@type": "Event",
 		"startDate": "start_date",
 		"endDate": "end_date"
 	},
-	// "start_date": "start_date", //?
-	// "end_date": "end_date", //?
-	// "contactPoint": "contact_person", //contactPoint
 	"contactPoint": {
 		"@type": "ContactPoint",
 		"name": "contact_person"
 	},
-	// "lead_implementing_agency": "lead_implementing_agency", //?
 	"parentOrganization": {
 		"@type": "Organization",
 		"name": "lead_implementing_agency"
 	},
-	// "ethic_policy": "ethic_policy", //ethicsPolicy
 	"ethicsPolicy": {
 		"@type": "CreativeWork",
 		"name": "ethic_policy"
 	},
-	// "logo": "logo",
 	"logo": {
 		"@type": "ImageObject",
 		"url": "logo"
