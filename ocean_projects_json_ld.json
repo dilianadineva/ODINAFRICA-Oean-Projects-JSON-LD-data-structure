@@ -17,7 +17,7 @@
 	],
 	"legalName": "legal_name",
 	"identifier": "identifier",
-	"spatialCoverage": [
+	"location": [
 		{
 			"@type": "Place",
 			"name": "country_id(name)"
@@ -28,7 +28,7 @@
 		}
 	],
 	"keywords": ["thematic_areas", "LME_region", "project_type"], 
-	"about": {
+	"event": {
 		"@type": "Event",
 		"startDate": "start_date",
 		"endDate": "end_date"
